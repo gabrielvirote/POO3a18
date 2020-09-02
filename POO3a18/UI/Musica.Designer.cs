@@ -66,7 +66,7 @@
             // 
             // txt_autor
             // 
-            this.txt_autor.Location = new System.Drawing.Point(418, 35);
+            this.txt_autor.Location = new System.Drawing.Point(407, 39);
             this.txt_autor.Name = "txt_autor";
             this.txt_autor.Size = new System.Drawing.Size(100, 20);
             this.txt_autor.TabIndex = 4;
