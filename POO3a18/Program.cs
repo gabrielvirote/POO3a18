@@ -1,8 +1,12 @@
 ﻿using System;
+using POO3a18.DTO;
+using POO3a18.DAL;
+using POO3a18.BLL;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using POO3a18.UI;
 
 namespace POO3a18
 {
@@ -16,7 +20,7 @@ namespace POO3a18
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmMusica());
         }
     }
 }

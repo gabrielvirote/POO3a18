@@ -1,6 +1,6 @@
 ﻿namespace POO3a18.UI
 {
-    partial class Musica
+    partial class frmMusica
     {
         /// <summary>
         /// Required designer variable.
@@ -88,7 +88,7 @@
             this.btn_exibir.UseVisualStyleBackColor = true;
             this.btn_exibir.Click += new System.EventHandler(this.exibir_Click);
             // 
-            // Musica
+            // frmMusica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -99,8 +99,8 @@
             this.Controls.Add(this.dgv_musica);
             this.Controls.Add(this.lbl_nomeautor);
             this.Controls.Add(this.lbl_nome);
-            this.Name = "Musica";
-            this.Text = "Form1";
+            this.Name = "frmMusica";
+            this.Text = "Musica";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_musica)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

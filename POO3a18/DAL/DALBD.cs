@@ -1,10 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace POO3a18.DAL
 {
@@ -13,8 +10,8 @@ namespace POO3a18.DAL
         private MySqlConnection conexao;
         private string string_conexao = "Persist security info= false; " +
                                          "server = localhost; " +
-                                         "Database= db_gravadora ;" +
-                                         "user = root; pwd=;";
+                                         "Database= db_gravadora;" +
+                                         "user = root; " +"pwd=;";
         // Metodo para conexão com o BD
         public void conectar()
         {

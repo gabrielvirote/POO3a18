@@ -13,22 +13,23 @@ using System.Windows.Forms;
 
 namespace POO3a18.UI
 {
-    public partial class Musica : Form
+    public partial class frmMusica : Form
     {
         tblMusicaBLL bllCliente = new tblMusicaBLL();
         tblMusicaDTO dtoCliente = new tblMusicaDTO();
        
-        public Musica()
+        public frmMusica()
         {
             InitializeComponent();
         }
+
 
         private void exibir_Click(object sender, EventArgs e)
         {
             string condicao = "nome like '%" + txt_autor.Text + "%'" +
                              "or nomeAutor like '%" + txt_nome.Text + "%'";
                             
-            dgv_musica.DataSource = bllCliente.PesquisarClientes(condicao);
+            dgv_musica.DataSource = bllCliente.PesquisarMusica(condicao);
 
 
         }
