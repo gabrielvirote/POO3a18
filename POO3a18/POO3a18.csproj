@@ -102,6 +102,18 @@
     <Compile Include="DTO\tblMusicaDTO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Cd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Cd.Designer.cs">
+      <DependentUpon>Cd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Gravadora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Gravadora.Designer.cs">
+      <DependentUpon>Gravadora.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Musica.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +129,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\Cd.resx">
+      <DependentUpon>Cd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Gravadora.resx">
+      <DependentUpon>Gravadora.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Musica.resx">
       <DependentUpon>Musica.cs</DependentUpon>
     </EmbeddedResource>

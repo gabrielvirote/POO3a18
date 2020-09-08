@@ -13,7 +13,12 @@ namespace POO3a18.BLL
     {
         private DALBD daoBanco = new DALBD();
 
-        public DataTable ListarFornecedores()
+        public DataTable PesquisarGravadora(string condicao)
+        {
+            string sql = string.Format($@"select * from tbl_Gravadora" + condicao);
+            return daoBanco.ExecutarConsulta(sql);
+        }
+        public DataTable PesquisarGravadora()
         {
             string sql = string.Format($@"select * from tbl_Gravadora");
             return daoBanco.ExecutarConsulta(sql);

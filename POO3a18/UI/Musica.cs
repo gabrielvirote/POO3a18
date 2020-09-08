@@ -15,12 +15,18 @@ namespace POO3a18.UI
 {
     public partial class frmMusica : Form
     {
-        tblMusicaBLL bllCliente = new tblMusicaBLL();
-        tblMusicaDTO dtoCliente = new tblMusicaDTO();
+        tblMusicaBLL bllMusica = new tblMusicaBLL();
+        tblMusicaDTO dtoMusica = new tblMusicaDTO();
        
         public frmMusica()
         {
             InitializeComponent();
+        }
+
+        private void frmMusica_Load(object sender, EventArgs e)
+        {
+
+            dgv_musica.DataSource = bllMusica.PesquisarMusica();
         }
 
 
@@ -29,7 +35,7 @@ namespace POO3a18.UI
             string condicao = "nome like '%" + txt_autor.Text + "%'" +
                              "or nomeAutor like '%" + txt_nome.Text + "%'";
                             
-            dgv_musica.DataSource = bllCliente.PesquisarMusica(condicao);
+            dgv_musica.DataSource = bllMusica.PesquisarMusica(condicao);
 
 
         }
@@ -42,5 +48,7 @@ namespace POO3a18.UI
                
 
             }
-        }
+
+    
+    }
 }

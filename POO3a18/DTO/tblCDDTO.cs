@@ -13,7 +13,23 @@ namespace POO3a18.DTO
         private double precoVenda;
 
         public int IdCD { get => idCD; set => idCD = value; }
-        public string NomeCD { get => nomeCD; set => nomeCD = value; }
+   
         public double PrecoVenda { get => precoVenda; set => precoVenda = value; }
+        public string NomeCD
+        {
+            set
+            {
+                if (value != string.Empty)
+                {
+                    this.nomeCD = value;
+                }
+                else
+                {
+                    throw new Exception("O campo Nome da musica é obrigatório.");
+                }
+
+            }
+            get { return this.nomeCD; }
+        }
     }
 }

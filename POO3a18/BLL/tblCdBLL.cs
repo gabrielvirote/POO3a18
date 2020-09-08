@@ -13,7 +13,12 @@ namespace POO3a18.BLL
     {
         private DALBD daoBanco = new DALBD();
 
-        public DataTable ListarCD()
+        public DataTable PesquisarCd(string condicao)
+        {
+            string sql = string.Format($@"select * from tbl_cd" + condicao);
+            return daoBanco.ExecutarConsulta(sql);
+        }
+        public DataTable PesquisarCd()
         {
             string sql = string.Format($@"select * from tbl_cd");
             return daoBanco.ExecutarConsulta(sql);

@@ -12,7 +12,23 @@ namespace POO3a18.DTO
         private string nome;
 
         public int IdGravadora { get => idGravadora; set => idGravadora = value; }
-        public string Nome { get => nome; set => nome = value; }
+     
+        public string Nome
+        {
+            set
+            {
+                if (value != string.Empty)
+                {
+                    this.nome = value;
+                }
+                else
+                {
+                    throw new Exception("O campo Nome da gravadora é obrigatório.");
+                }
+
+            }
+            get { return this.nome; }
+        }
 
     }
 }
