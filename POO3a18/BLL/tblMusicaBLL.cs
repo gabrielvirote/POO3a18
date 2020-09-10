@@ -25,8 +25,26 @@ namespace POO3a18.BLL
             string sql = string.Format($@"select * from tbl_Musica");
             return daoBanco.ExecutarConsulta(sql);
         }
-       
-    
+        public void ExcluirMusica (tblMusicaDTO objMusica)
+        {
+            string sql = string.Format($@"DELETE FROM tbl_musica where id_musica = {objMusica.Id_Musica};");
+            daoBanco.ExecutarComando(sql);
+        }
+        public void EditarMusica(tblMusicaDTO DtoMusica)
+        {
+            string sql = string.Format($@"UPDATE tbl_musica set nome = '{DtoMusica.Nome}',
+                                                                 Nome_autor = '{DtoMusica.NomeAutor}';");
+                                                                
+            daoBanco.ExecutarComando(sql);
+        }
+        public void AdicionarMusica(tblMusicaDTO ObjMusica)
+        {
+            string sql = string.Format($@"INSERT INTO tbl_cliente VALUES (NULL, '{ObjMusica.Nome}',
+                                                                                '{ObjMusica.NomeAutor}';");
+                                                                                
+            daoBanco.ExecutarComando(sql);
+        }
+
 
     }
 }

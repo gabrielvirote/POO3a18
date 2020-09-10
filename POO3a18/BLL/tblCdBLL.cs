@@ -23,5 +23,24 @@ namespace POO3a18.BLL
             string sql = string.Format($@"select * from tbl_cd");
             return daoBanco.ExecutarConsulta(sql);
         }
+        public void ExcluirCd(tblCdDTO objCd)
+        {
+            string sql = string.Format($@"DELETE FROM tbl_Cd where id_Cd = {objCd.IdCD};");
+            daoBanco.ExecutarComando(sql);
+        }
+        public void EditarCd(tblCdDTO DtoCd)
+        {
+            string sql = string.Format($@"UPDATE tbl_Cd set nome = '{DtoCd.NomeCD}',
+                                           where Preço_venda = '{DtoCd.PrecoVenda}'; ");
+
+            daoBanco.ExecutarComando(sql);
+        }
+        public void AdicionarCd(tblCdDTO ObjCd)
+        {
+            string sql = string.Format($@"INSERT INTO tbl_Cd VALUES (NULL, '{ObjCd.NomeCD}', 
+                                                                           '{ObjCd.PrecoVenda}'); ");
+
+            daoBanco.ExecutarComando(sql);
+        }
     }
 }
